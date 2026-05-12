@@ -1,0 +1,37 @@
+# E-commerce Funnel Analysis — Insights & Recommendations
+
+## TL;DR
+- Analyzed [4.2M] user events across [October 2019] from a cosmetics e-commerce store
+- View → Cart drop-off ([34]%) is 3x bigger than Cart → Purchase drop-off
+- Weekly retention decays to ~[6]% by week 4
+- Browse-to-buy ratios vary 5x across categories — different UX problems for different categories
+
+## Key Insight #1: The PDP, not Checkout, is the Real Leak
+Most product teams instinctively optimize the checkout flow when conversion is low.
+This data shows the opposite — [88]% of users drop between View and Cart, while only [22]% drop between Cart and Purchase.
+
+**Recommendation:** Prioritize PDP A/B tests (reviews, social proof, sticky CTA) over checkout optimization for the next sprint.
+
+## Key Insight #2: Cart Abandonment Has Two Modes
+Of users who add to cart but don't purchase, ~30% actively remove items vs 70% who passively abandon.
+These are two different psychological states requiring different interventions.
+
+**Recommendation:**
+- For active removers: Show total cost (incl. shipping) earlier in the flow
+- For passive abandoners: Trigger reminder email at hour 4 + day 1
+
+## Key Insight #3: Re-engagement Window is Days 5-7
+Retention drops sharply between week 1 and week 2. Days 5-7 represent the last reachable window.
+
+**Recommendation:** Trigger personalized re-engagement campaigns timed to days 5-7 of inactivity, with content tied to previously viewed categories.
+
+## Key Insight #4: One Funnel Doesn't Fit All
+High-consideration categories (premium skincare) browse 80:1 before buying. Impulse categories convert at 15:1.
+
+**Recommendation:** Differentiate UX by category. Add review widgets and comparison tools for high-consideration; one-click checkout for impulse.
+
+## Methodology
+- 4M+ events from cosmetics e-commerce store (October 2019)
+- DuckDB + SQL for analysis
+- pandas + matplotlib for visualizations
+- Cohort analysis: weekly cohorts, 4-week retention horizon
