@@ -1,0 +1,14 @@
+# Datasets (too big for GitHub)
+data/*.csv
+*.db
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
+Thumbs.db
